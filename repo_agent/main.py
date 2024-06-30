@@ -1,3 +1,5 @@
+import sys
+
 from importlib import metadata
 
 import click
@@ -250,7 +252,9 @@ def run(
     settings = Setting(
         project=project_settings, chat_completion=chat_completion_settings
     )
-    write_config(settings.model_dump())
+    setting.project = project_settings
+    setting.chat_completion = chat_completion_settings
+    # write_config(settings.model_dump())  # NOTE Get config from input parameters.
     set_logger_level_from_config(log_level=setting.project.log_level)
 
     runner = Runner()
@@ -306,4 +310,6 @@ def chat_with_repo():
 
 
 if __name__ == "__main__":
-    cli()
+    # cli()
+    sys.setrecursionlimit(1000000)
+    run()

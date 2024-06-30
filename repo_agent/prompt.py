@@ -25,8 +25,6 @@ The standard format is as follows:
 · ...
 **Code Description**: The description of this {code_type_tell}.
 (Detailed and CERTAIN code analysis and description...{has_relationship})
-**Note**: Points to note about the use of the code
-{have_return_tell}
 
 Please note:
 - Any part of the content you generate SHOULD NOT CONTAIN Markdown hierarchical heading and divider syntax.
@@ -35,3 +33,6 @@ Please note:
 """
 
 USR_PROMPT = """Keep in mind that your audience is document readers, so use a deterministic tone to generate precise content and don't let them know you're provided with code snippet and documents. AVOID ANY SPECULATION and inaccurate descriptions! Now, provide the documentation for the target object in {language} in a professional way."""
+
+# **Note**: Points to note about the use of the code
+# {have_return_tell}

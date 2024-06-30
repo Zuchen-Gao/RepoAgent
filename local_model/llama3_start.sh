@@ -1,0 +1,12 @@
+python -m vllm.entrypoints.openai.api_server \
+  --port 8000 \
+  --model NousResearch/Meta-Llama-3-8B-Instruct \
+  --trust-remote-code \
+  --tensor-parallel-size 4 \
+  --swap-space 16 \
+  --dtype float16 \
+  --max-model-len 8192 \
+  --enforce-eager \
+  --gpu-memory-utilization 0.82 \
+  --max-num-seqs 10 \
+  --api-key token-abc123

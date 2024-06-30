@@ -231,7 +231,7 @@ class ChatEngine:
             "code_type_tell": code_type_tell,
             "code_name": code_name,
             "code_content": code_content,
-            "have_return_tell": have_return_tell,
+            # "have_return_tell": have_return_tell,
             "has_relationship": has_relationship,
             "reference_letter": reference_letter,
             "referencer_content": referencer_content,
